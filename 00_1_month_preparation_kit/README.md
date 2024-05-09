@@ -59,5 +59,13 @@ operators can also be used with bool.
 - Different types have different sizes in memory, so performing bitwise
 operations on them will result in different values.
 
+## Shifting array
+
+Since C# does not provide built-in methods for shifting array, you should
+write your own.
+
+- Modulus operator is used to calculate the index of shift.
+- See the examples for more info.
+
 ## Reference
 [1 Month Preparation Kit](https://www.hackerrank.com/interview/preparation-kits/one-month-preparation-kit/one-month-week-one/challenges)
