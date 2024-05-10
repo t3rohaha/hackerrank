@@ -1,17 +1,17 @@
-namespace DynamicArray;
+namespace Week2;
 
-public class Program
+public class DynamicArray
 {
     public static void Main()
     {
-        Console.WriteLine(string.Join("\n" ,DynamicArray(2, [[1, 0, 5],
-                                                             [1, 1, 7],
-                                                             [1, 0, 3],
-                                                             [2, 1, 0],
-                                                             [2, 1, 1]])));
+        Console.WriteLine(string.Join("\n" ,Solution(2, [[1, 0, 5],
+                                                         [1, 1, 7],
+                                                         [1, 0, 3],
+                                                         [2, 1, 0],
+                                                         [2, 1, 1]])));
     }
 
-    static List<int> DynamicArray(int n, int[][] queries)
+    static List<int> Solution(int n, int[][] queries)
     {
         var arr2D = new List<int>[n];
 

@@ -1,11 +1,11 @@
-namespace DrawingBook;
+namespace Week2;
 
-public class Program
+public class DrawingBook
 {
     public static void Main()
     {
-        Console.WriteLine(PageCount(5, 3));
-        Console.WriteLine(PageCount(5, 4));
+        Console.WriteLine(Solution(5, 3));
+        Console.WriteLine(Solution(5, 4));
     }
 
     /*
@@ -30,7 +30,7 @@ public class Program
         lr = rp
         rl = tp - rp
     */
-    static int PageCount(int n, int p)
+    static int Solution(int n, int p)
     {
         var totalPages = n / 2;
         var requestedPage = p / 2;

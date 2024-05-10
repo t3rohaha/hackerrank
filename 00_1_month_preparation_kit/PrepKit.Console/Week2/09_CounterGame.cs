@@ -1,18 +1,18 @@
-namespace CounterGame;
+namespace Week2;
 
-public class Program
+public class CounterGame
 {
     public static void Main()
     {
-        Console.WriteLine(CounterGame(1073741824));
-        Console.WriteLine(CounterGame(1073741824));
-        Console.WriteLine(CounterGame(1459730561));
-        Console.WriteLine(CounterGame(8));
-        Console.WriteLine(CounterGame(1246326493));
-        Console.WriteLine(CounterGame(1384145241));
+        Console.WriteLine(Solution(1073741824));
+        Console.WriteLine(Solution(1073741824));
+        Console.WriteLine(Solution(1459730561));
+        Console.WriteLine(Solution(8));
+        Console.WriteLine(Solution(1246326493));
+        Console.WriteLine(Solution(1384145241));
     }
 
-    static string CounterGame(long n)
+    static string Solution(long n)
     {
         // TODO
 

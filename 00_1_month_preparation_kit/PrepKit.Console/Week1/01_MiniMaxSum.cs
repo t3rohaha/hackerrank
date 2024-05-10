@@ -1,13 +1,13 @@
-namespace MiniMaxSum;
+namespace Week1;
 
-public class Program
+public class MiniMaxSum
 {
     public static void Main()
     {
-        MiniMax([1, 3, 5, 7, 9]);
+        Solution([1, 3, 5, 7, 9]);
     }
 
-    static void MiniMax(List<int> arr)
+    static void Solution(List<int> arr)
     {
         int min = int.MaxValue;
         int max = int.MinValue;

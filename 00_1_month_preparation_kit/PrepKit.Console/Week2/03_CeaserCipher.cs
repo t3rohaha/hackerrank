@@ -1,17 +1,17 @@
-namespace CeaserCipher;
+namespace Week2;
 
-public class Program
+public class CeaserCipher
 {
     public static void Main()
     {
-        Console.WriteLine(CeaserCipher("middle-Outz", 2));
+        Console.WriteLine(Solution("middle-Outz", 2));
     }
 
     /*
         s -> Text.
         k -> Alphabet rotation factor.
     */
-    static string CeaserCipher(string s, int k)
+    static string Solution(string s, int k)
     {
         var encryptedStr = "";
         var alphabet = "abcdefghijklmnopqrstuvwxyz";

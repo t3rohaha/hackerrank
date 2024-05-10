@@ -1,17 +1,17 @@
-namespace SherlockArray;
+namespace Week2;
 
-public class Program
+public class SherlockArray
 {
     public static void Main()
     {
-        Console.WriteLine(BalancedSums([1]));
-        Console.WriteLine(BalancedSums([1, 2]));
-        Console.WriteLine(BalancedSums([5, 6, 8, 11]));
-        Console.WriteLine(BalancedSums([1, 2, 3]));
-        Console.WriteLine(BalancedSums([1, 2, 3, 3]));
+        Console.WriteLine(Solution([1]));
+        Console.WriteLine(Solution([1, 2]));
+        Console.WriteLine(Solution([5, 6, 8, 11]));
+        Console.WriteLine(Solution([1, 2, 3]));
+        Console.WriteLine(Solution([1, 2, 3, 3]));
     }
 
-    static string BalancedSums(int[] arr)
+    static string Solution(int[] arr)
     {
         var size = arr.Count();
 

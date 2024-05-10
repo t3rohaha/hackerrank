@@ -1,17 +1,15 @@
-namespace DiagonalDifference;
+namespace Week1;
 
-public class Program
+public class DiagonalDifference
 {
     public static void Main()
     {
-        Console.WriteLine(DiagonalDifference([
-            [11, 2, 4],
-            [4, 5, 6],
-            [10, 8, -12]
-        ]));
+        Console.WriteLine(Solution([[11, 2, 4],
+                                    [ 4, 5, 6],
+                                    [10, 8, -12]]));
     }
 
-    static int DiagonalDifference(int[][] arr)
+    static int Solution(int[][] arr)
     {
         int length = arr.Count();
         int d1 = 0, d2 = 0;
@@ -26,10 +24,12 @@ public class Program
     }
 }
 
-// 00 01 02 03
-// 10 11 12 13
-// 20 21 22 23
-// 30 31 32 33
+/*
+00 01 02 03
+10 11 12 13
+20 21 22 23 
+30 31 32 33 
 
-// 00 11 22 33
-// 03 12 21 30
+00 11 22 33
+03 12 21 30
+*/

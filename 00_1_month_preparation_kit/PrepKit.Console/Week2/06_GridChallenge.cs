@@ -1,28 +1,28 @@
-namespace GridChallenge;
+namespace Week2;
 
-public class Program
+public class GridChallenge
 {
     public static void Main()
     {
-        Console.WriteLine(string.Join(" ", GridChallenge(["abc",
-                                                          "ade",
-                                                          "efg"])));
+        Console.WriteLine(string.Join(" ", Solution(["abc",
+                                                     "ade",
+                                                     "efg"])));
 
-        Console.WriteLine(string.Join(" ", GridChallenge(["abc",
-                                                          "lmp",
-                                                          "qrt"])));
+        Console.WriteLine(string.Join(" ", Solution(["abc",
+                                                     "lmp",
+                                                     "qrt"])));
 
-        Console.WriteLine(string.Join(" ", GridChallenge(["mpxz",
-                                                          "abcd",
-                                                          "wlmf"])));
+        Console.WriteLine(string.Join(" ", Solution(["mpxz",
+                                                     "abcd",
+                                                     "wlmf"])));
 
-        Console.WriteLine(string.Join(" ", GridChallenge(["abc",
-                                                          "hjk",
-                                                          "mpq",
-                                                          "rtv"])));
+        Console.WriteLine(string.Join(" ", Solution(["abc",
+                                                     "hjk",
+                                                     "mpq",
+                                                     "rtv"])));
     }
 
-    static string GridChallenge(string[] grid)
+    static string Solution(string[] grid)
     {
         var rows = grid.Count();
         var cols = grid[0].Count();

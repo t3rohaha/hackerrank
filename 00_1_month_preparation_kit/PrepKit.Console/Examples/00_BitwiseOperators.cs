@@ -1,6 +1,6 @@
-namespace BitwiseOperators;
+namespace Examples;
 
-public class Program
+public class BitwiseOperators
 {
     public static void Main()
     {

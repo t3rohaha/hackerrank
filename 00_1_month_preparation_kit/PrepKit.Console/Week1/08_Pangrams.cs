@@ -1,26 +1,27 @@
-namespace Pangrams;
+namespace Week1;
 using System.Diagnostics;
 
-public class Program
+public class Pangrams
 {
     public static void Main()
     {
-        string input = "We promptly judged antique ivory buckles for the next prize";
+        string input = "We promptly judged antique ivory buckles for the " +
+                       "next prize";
 
         Stopwatch stopwatch = new Stopwatch();
 
         stopwatch.Start();
-        for (int i = 0; i < 1000000; i++) Pangrams(input);
+        for (int i = 0; i < 1000000; i++) Solution1(input);
         stopwatch.Stop();
-        Console.WriteLine($"Pangrams execution time: {stopwatch.Elapsed}");
+        Console.WriteLine($"Solution1 execution time: {stopwatch.Elapsed}");
 
         stopwatch.Restart();
-        for (int i = 0; i < 1000000; i++) PangramsCounter(input);
+        for (int i = 0; i < 1000000; i++) Solution2(input);
         stopwatch.Stop();
-        Console.WriteLine($"Pangrams2 execution time: {stopwatch.Elapsed}");
+        Console.WriteLine($"Solution2 execution time: {stopwatch.Elapsed}");
     }
 
-    static string Pangrams(string s)
+    static string Solution1(string s)
     {
         string alphabet = "abcdefghijklmnopqrstuvwxyz";
         string normalized = s.ToLower();
@@ -32,7 +33,7 @@ public class Program
         return "pangram";
     }
 
-    static string PangramsCounter(string s)
+    static string Solution2(string s)
     {
         var normalized = s.ToLower().Where(char.IsLetter);
 

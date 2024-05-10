@@ -1,14 +1,14 @@
-namespace RecursiveDigitSum;
+namespace Week2;
 
-public class Program
+public class RecursiveDigitSum
 {
     public static void Main()
     {
-        Console.WriteLine(SuperDigit("9875", 4));
-        Console.WriteLine(SuperDigit("148", 3));
+        Console.WriteLine(Solution("9875", 4));
+        Console.WriteLine(Solution("148", 3));
     }
 
-    static int SuperDigit(string n, int k)
+    static int Solution(string n, int k)
     {
         // 'n' will always become single digit.
         if (n.Length == 1)
@@ -27,6 +27,6 @@ public class Program
         // Otherwise multiply by 1, which does not change the sum.
         sum *= k;
 
-        return SuperDigit(sum.ToString(), 1);
+        return Solution(sum.ToString(), 1);
     }
 }

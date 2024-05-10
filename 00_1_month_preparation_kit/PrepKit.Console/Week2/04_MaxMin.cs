@@ -1,15 +1,15 @@
-namespace MaxMin;
+namespace Week2;
 
-public class Program
+public class MaxMin
 {
     public static void Main()
     {
-        Console.WriteLine(MaxMin(5, [4504, 1520, 5857, 4094, 4157, 3902, 822,
-                                     6643, 2422, 7288, 8245, 9948, 2822, 1784,
-                                     7802, 3142, 9739, 5629, 5413, 7232]));
+        Console.WriteLine(Solution(5, [4504, 1520, 5857, 4094, 4157, 3902, 822,
+                                       6643, 2422, 7288, 8245, 9948, 2822, 1784,
+                                       7802, 3142, 9739, 5629, 5413, 7232]));
     }
 
-    static int MaxMin(int k, int[] arr)
+    static int Solution(int k, int[] arr)
     {
         var orderedArr = arr.OrderBy(_ => _).ToArray();
 

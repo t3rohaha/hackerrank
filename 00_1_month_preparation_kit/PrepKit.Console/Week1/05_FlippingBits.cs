@@ -1,13 +1,13 @@
-namespace FlippingBits;
+namespace Week1;
 
-public class Program
+public class FlippingBits
 {
     public static void Main()
     {
-        Console.WriteLine(FlippingBits(1));
+        Console.WriteLine(Solution(1));
     }
 
-    static long FlippingBits(long n)
+    static long Solution(long n)
     {
         return ~(uint)n;
     }

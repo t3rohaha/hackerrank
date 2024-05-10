@@ -1,13 +1,13 @@
-namespace PlusMinus;
+namespace Week1;
 
-public class Program
+public class PlusMinus
 {
     public static void Main()
     {
-        PlusMinus([-4, 3, -9, 0, 4, 1]);
+        Solution([-4, 3, -9, 0, 4, 1]);
     }
 
-    static void PlusMinus(List<int> arr)
+    static void Solution(List<int> arr)
     {
         decimal positive = 0, negative = 0, zero = 0;
 

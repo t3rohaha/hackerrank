@@ -1,23 +1,19 @@
-namespace SparseArrays;
+namespace Week1;
 
-public class Program
+public class SparseArrays
 {
     public static void Main()
     {
-        Console.WriteLine(string.Join("\n",
-                MatchingStrings(
-                    ["ab", "ab", "abc"],
-                    ["ab", "abc", "bc"])));
+        Console.WriteLine(string.Join("\n", Solution(["ab", "ab", "abc"],
+                                                     ["ab", "abc", "bc"])));
 
         Console.WriteLine();
 
-        Console.WriteLine(string.Join("\n",
-                MatchingStrings(
-                    ["def", "de", "fgh"],
-                    ["de", "lmn", "fgh"])));
+        Console.WriteLine(string.Join("\n", Solution(["def", "de", "fgh"],
+                                                     ["de", "lmn", "fgh"])));
     }
 
-    static List<int> MatchingStrings(List<string> strings, List<string> queries)
+    static List<int> Solution(List<string> strings, List<string> queries)
     {
         var group = strings.GroupBy(x => x);
 
@@ -25,9 +21,16 @@ public class Program
 
         foreach (var q in queries)
         {
-            var grouping = group.FirstOrDefault(x => x.Key == q);
-            if (grouping == null) results.Add(0);
-            else results.Add(grouping.Count());
+            var g = group.FirstOrDefault(x => x.Key == q);
+
+            if (g == null)
+            {
+                results.Add(0);
+            }
+            else
+            {
+                results.Add(g.Count());
+            }
         }
 
         return results;

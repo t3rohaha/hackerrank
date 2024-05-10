@@ -1,10 +1,12 @@
-namespace ShiftingArray;
+namespace Examples;
 
-public class Program
+public class ShiftingArray
 {
     public static void Main()
     {
-        Console.WriteLine(string.Join(" ", Shift([1, 2, 3, 4], -2)));
+        int[] arr = [1, 2, 3, 4, 5];
+        PrintArray(arr);
+        PrintArray(Shift(arr, -2));
     }
 
     static int[] Shift(int[] arr, int k)
@@ -31,5 +33,10 @@ public class Program
         }
 
         return newArr;
+    }
+
+    static void PrintArray(int[] arr)
+    {
+        Console.WriteLine(string.Join(" ", arr));
     }
 }
