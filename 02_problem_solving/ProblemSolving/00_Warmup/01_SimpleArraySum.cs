@@ -1,4 +1,4 @@
-namespace ProblemSolving;
+namespace Warmup;
 
 public class SimpleArraySum
 {
