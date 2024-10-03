@@ -1,15 +1,11 @@
-const helper = require('./01-print-the-elements-of-a-linked-list.js');
-const SinglyLinkedListNode = helper.SinglyLinkedListNode;
+const utilities = require('./utilities.js');
+const buildSinglyLinkedList = utilities.buildSinglyLinkedList;
+const printSinglyLinkedList = utilities.printSinglyLinkedList;
 
-function insertNodeAtPosition(llist, data, position) {
-    if (position === 0) {
-        const newNode = new SinglyLinkedListNode();
-        newNode.data = data;
-        newNode.next = llist;
-        return newNode;
-    }
+function insertNodeAtPosition(head, data, position) {
+    if (position === 0) return { data, next: head };
 
-    let current = llist;
+    let current = head;
     let next = current.next;
     let i = 1;
 
@@ -19,9 +15,12 @@ function insertNodeAtPosition(llist, data, position) {
         i++;
     }
 
-    const newNode = new SinglyLinkedListNode();
-    newNode.data = data;
-    newNode.next = next;
-    current.next = newNode;
-    return llist;
+    current.next = { data, next };
+
+    return head;
 }
+
+let head = buildSinglyLinkedList([20, 6, 2, 19, 7, 4, 15, 9]);
+printSinglyLinkedList(head);
+head = insertNodeAtPosition(head, 100, 8);
+printSinglyLinkedList(head);

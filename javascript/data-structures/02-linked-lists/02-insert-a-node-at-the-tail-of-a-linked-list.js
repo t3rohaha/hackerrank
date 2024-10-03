@@ -1,12 +1,10 @@
-const helper = require('./01-print-the-elements-of-a-linked-list.js');
-const seedLinkedList = helper.seedLinkedList;
-const printLinkedList = helper.printLinkedList;
-const SinglyLinkedListNode = helper.SinglyLinkedListNode;
+const utilities = require('./utilities.js');
+const printSinglyLinkedList = utilities.printSinglyLinkedList;
 
 function insertNodeAtTail(head, data) {
-    const newNode = new SinglyLinkedListNode(data);
-    if (head == null)
-        return newNode;
+    const newNode = { data };
+
+    if (head == null) return newNode;
 
     let pointer = head;
     while (pointer.next != null)
@@ -15,7 +13,8 @@ function insertNodeAtTail(head, data) {
     return head;
 }
 
-let head = seedLinkedList();
-insertNodeAtTail(head, 10);
-insertNodeAtTail(head, 11);
-printLinkedList(head);
+let head = null;
+head = insertNodeAtTail(head, 10);
+head = insertNodeAtTail(head, 11);
+head = insertNodeAtTail(head, 12);
+printSinglyLinkedList(head);
